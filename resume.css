@@ -94,6 +94,12 @@ a:visited {
     background-color: #1a1a1a;
     color: #f0f0f0;
 }
+body.dark-mode #about-me {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
 
 body.dark-mode a {
     color: #84d6ff;
