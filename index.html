@@ -2,109 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Samin Fathizadeh">
-    <meta name="description" content="A simple resume that includes personal information and skills.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>samin fathizadeh resume</title>
+    <meta name="author" content="Samin Fathizadeh">
+    <meta name="description" content="Professional resume website for Samin Fathizadeh, Computer Engineering student.">
+    <title>Samin Fathizadeh | Resume</title>
     <link rel="icon" type="image/png" href="logo-resume.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="resume.css">
-   
-    
 </head>
-
 <body>
- 
-
+    <button id="theme-toggle">Toggle Dark/Light Mode</button>
 
     <header>
-        <h1>MY RESUME</h1>
-        <img src="my_image.jpg" alt="photo" class="profile-image" >
-        <hr class="devider">
+        <h1>Samin Fathizadeh</h1>
+        <p>Computer Engineering Student | Creative Developer | Multilingual Communicator</p>
+        <img src="My_image.jpg" alt="Samin Fathizadeh" class="profile-image">
     </header>
 
-<button id="theme-toggle" style="position:fixed; top:20px; right:20px; padding:10px 15px; z-index:999;">
-    Toggle Dark/Light Mode
-</button>
+    <section class="resume-section" id="about">
+        <h2><i class="fas fa-id-badge"></i> About Me</h2>
+        <p>Hello! I’m Samin, a passionate Computer Engineering student with a strong interest in web technologies, software design, and cross-cultural communication. I enjoy transforming ideas into code and love continuous learning in tech.</p>
+    </section>
 
-
-    <section id="about-me">
-        <h2><i class="fas fa-id-badge"></i>About Me</h2>
-        <p>My name is Samin Fathizadeh, I am studing Computer Engineering.<br>
-        I enjoys learning new programming languages and working on creative projects.</p>
-        </section>
-    
     <section class="resume-section">
         <h2><i class="fas fa-user"></i> Personal Information</h2>
-        <p><strong>Name:</strong> Samin Fathizadeh</p>
-        <p><strong>Email:</strong><a href="mailto:2210206519@ogrenci.karabuk.edu.tr">2210206519@ogrenci.karabuk.edu.tr</a></p>
-        <p><strong>Phone:</strong><a href ="tel:+90 505 728 7118">+90 505 728 7118</a></p>
+        <p><strong>Email:</strong> <a href="mailto:2210206519@ogrenci.karabuk.edu.tr">2210206519@ogrenci.karabuk.edu.tr</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+905057287118">+90 505 728 7118</a></p>
     </section>
-        
 
-
-   <section class="resume-section">
-        <h2><i class="fas fa-graduation-cap"></i>Education</h2>
+    <section class="resume-section">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
         <p><strong>University:</strong> Karabük University</p>
-        <p><strong>Major:</strong> Computer Engineering</p>
+        <p><strong>Department:</strong> Computer Engineering</p>
     </section>
-    
 
-   <section class="resume-section">
-        <h2><i class="fas fa-code"></i>Programming Skills</h2>
+    <section class="resume-section">
+        <h2><i class="fas fa-code"></i> Programming Skills</h2>
         <ul>
             <li>C</li>
             <li>Java</li>
             <li>SQL</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>php</li>
-
+            <li>HTML & CSS</li>
+            <li>PHP</li>
+            <li>JavaScript (in progress)</li>
         </ul>
-        </section>
-        
-   
+    </section>
 
-   <section class="resume-section">
-        <h2><i class="fas fa-language"></i>Languages</h2>
+    <section class="resume-section">
+        <h2><i class="fas fa-language"></i> Languages</h2>
         <ul>
-            <li>Azerbaijani (Native)</li>
-            <li>Turkish (Advanced)</li>
-            <li>English (Advanced)</li>
-            <li>Persian (Advanced)</li>
+            <li>Azerbaijani – Native</li>
+            <li>Turkish – Advanced</li>
+            <li>English – Advanced</li>
+            <li>Persian – Advanced</li>
         </ul>
-   </section>
-   <footer style="text-align:center; font-size:14px; color:#666; margin-top:40px;">
-    <p>Samin Fathizadeh — Resume &copy; 2025</p>
-</footer>
-<div class="social-links">
-    <a href="https://instagram.com/samin.eft" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-    </a> |
-    <a href="https://wa.me/905057287118" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-</div>
+    </section>
+
+    <section class="resume-section" id="contact">
+        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Samin Fathizadeh | All rights reserved.</p>
+        <p><a href="#contact">Contact Me</a></p>
+    </footer>
+
+    <div class="social-links">
+        <a href="https://instagram.com/samin.eft" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/905057287118" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
 
     <script>
-    const toggleBtn = document.getElementById("theme-toggle");
+        const toggleBtn = document.getElementById("theme-toggle");
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        });
 
-    toggleBtn.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-
-        if (document.body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-        } else {
-            localStorage.setItem("theme", "light");
-        }
-    });
-
-    window.onload = function () {
-        if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark-mode");
-        }
-    };
-</script>
-
+        window.onload = () => {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        };
+    </script>
 </body>
 </html>
